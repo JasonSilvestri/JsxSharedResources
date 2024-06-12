@@ -100,7 +100,7 @@ Many applications in the `Custom jSilvestri.com BETA v 2024 Web API Demo Collect
     - Create a script to copy the shared resources from `JsxSharedResources` to the `assets` folder of the Angular project during the build process.
 
     ```json
-    // package.json
+    
     "scripts": {
         "postinstall": "npm run copy-shared-resources",
         "copy-shared-resources": "cp -r ../JsxSharedResources/* ./src/assets/"
@@ -125,7 +125,7 @@ Many applications in the `Custom jSilvestri.com BETA v 2024 Web API Demo Collect
     - Create a script to copy the shared resources from `JsxSharedResources` to the `assets` folder of the Vue project during the build process.
 
     ```json
-    // package.json
+    
     "scripts": {
         "postinstall": "npm run copy-shared-resources",
         "copy-shared-resources": "cp -r ../JsxSharedResources/* ./public/assets/"
