@@ -4,41 +4,57 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <Title>jSilvestri.com BETA v 2024 Web API Demo Collection JSX Shared Resources Class Library</Title>
+    <Title>Jsx Shared Resources Project: Phase 1</Title>
+    <Version>2024.0.0.001</Version>
+    <Authors>Jason Silvestri</Authors>
     <Company>jSilvestri.com</Company>
-    <Product>jSilvestri.com BETA v 2024 Web API Demo Collection: Official JSX Shared Resources Class Library Application</Product>
-    <Description>The jSilvestri.com BETA v 2024 mobile and web applications, developed for most smart phones, tablets and desktop computers, was created to showcase a wide range of skills to potential clients and employers, while providing helpful information to fellow developers, demos for interview talks, access to resumes, etc.
+    <Product>Jsx Shared Resources Asp.NET Core Project: From the jSilvestri.com BETA v 2024 Web API Demo Collection</Product>
+    <Description>The jSilvestri.com BETA v 2024 mobile and web applications, developed for most smart phones, tablets and desktop computers, were created to showcase a wide range of skills to potential clients and employers, to support existing clients, while providing helpful information to fellow developers, demos for interview talks, access to resumes, etc.
 
-The JSX Shared Resources application (i.e., jSilvestri.com BETA v 2024 JSX Shared Resources Class Library) in specific, is a FREE, open-source, custom, reusable, jSilvestri.com 2024 Web API Demo Collections ASP.NET Core 8 Class Library, and a project that contains shared static resources (HTML files, images, JavaScript, and CSS) used across multiple client projects, including JsxAngularWebApiDemo, JsxReactWebApiDemo, JsxVueWebApiDemo, and JsxBlazorWebApiDemo. This project ensures consistency and simplifies the management of these resources.
+The JSX Shared Resources Project is a project that contains shared resources such as images, styles, and scripts used across multiple web applications in the jSilvestri.com BETA v 2024 Web API Demo Collection. This project aims to maintain consistency and avoid duplication of resources across different projects.
 
-Many applications in the Custom jSilvestri.com BETA v 2024 Web API Demo Collection, such as the Angular Web API Demo, Blazor Web API Demo, React Web API Demo, and Vue Web API Demo Applications will use this project to reference common features throughout the collective applications.</Description>
+Currently in Phase 1 of 4, this project is one of several projects from the jSilvestri.com BETA v 2024 Web API Demo Collection.</Description>
     <Copyright>Copyright © 2024 All Rights Reserved by Jason Silvestri</Copyright>
-    <PackageIcon>favicon.png</PackageIcon>
+    <PackageIcon>android-chrome-256x256.png</PackageIcon>
+    <PackageProjectUrl>https://github.com/JasonSilvestri/JsxSharedResources</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <RepositoryUrl>https://github.com/JasonSilvestri/JsxSharedResources</RepositoryUrl>
-    <PackageReleaseNotes>06/03/2024 JSILVESTRI.COM BETA V 2024.0.0.001 CHECK-IN
-Current Workflow State: Completed
-Mobile / Web Developer: Jason Silvestri
+    <RepositoryUrl>https://github.com/JasonSilvestri/JsxSharedResources.git</RepositoryUrl>
+    <PackageReleaseNotes>
+      06/27/2024 JSILVESTRI.COM BETA V 2024.0.0.001 Release
+      Current Workflow State: Completed
+      Mobile / Web Developer: Jason Silvestri
 
-Date Reported:    June 01, 2024
-Date Completed: June 03, 2024
-Build: BETA v 2024.0.0.001
+      Date Reported:    June 26, 2024
+      Date Completed: June 27, 2024
+      Build: BETA v 2024.0.0.001
 
-All Notes:
-This release (2024.0.0.001) marks the first iteration of the custom jSilvestri.com BETA v 2024 Web API Demo Collection: Official JSX Shared Resources Application.
+      All Notes:
+      This release (2024.0.0.001) marks the first iteration of the Official JSX Shared Resources from the jSilvestri.com BETA v 2024 Web API Demo Collection.
 
-⚠️ IMPORTANT! ⚠️
+      * Reverted reference chnages across all applications of the jSilvestri.com BETA v 2024 Web API Demo Collection.
 
-This is the initial release of the Custom jSilvestri.com BETA v2024 Web API Demo Collection: Official JSX Shared Resources Application. It includes only the essential resources by design.
+      * Added new JsxSharedResources support for favicons and tiles for smart phones, tablets, touch screens, etc. via Constants.
 
-Many applications in the Custom jSilvestri.com BETA v2024 Web API Demo Collection, such as the Angular, Blazor, React, and Vue Web API Demo applications, will begin similarly. This intentional minimalism allows for a demonstration of the step-by-step evolution of each application, from initial template to fully developed project. This progression will cover various aspects including graphics, themes, imagery, CSS, JS, HTML, and related technologies, security updates, highlighting the process of maximizing creative asset reuse.</PackageReleaseNotes>
+      * Added new JsxSharedResources support for relative and absolute URL manufacturing via Constants.
+
+      ⚠️ IMPORTANT! ⚠️
+
+      This is the initial Phase 1 of 4 release of the application. It includes only the essential resources by design, and it will have a release lifecycle of already planned phases and features, also by design.
+    </PackageReleaseNotes>
+
     <AssemblyVersion>2024.0.0.001</AssemblyVersion>
     <FileVersion>2024.0.0.1</FileVersion>
     <Version>2024.0.0.001</Version>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="android-chrome-192x192.png" />
+    <None Remove="android-chrome-72x72.png" />
+    <None Remove="apple-touch-icon.png" />
+    <None Remove="browserconfig.xml" />
     <None Remove="css\site.css" />
+    <None Remove="favicon-16x16.png" />
+    <None Remove="favicon-32x32.png" />
     <None Remove="favicon.ico" />
     <None Remove="js\site.js" />
     <None Remove="lib\bootstrap\dist\css\bootstrap-grid.css" />
@@ -98,9 +114,18 @@ Many applications in the Custom jSilvestri.com BETA v2024 Web API Demo Collectio
     <None Remove="lib\jquery\dist\jquery.min.js" />
     <None Remove="lib\jquery\dist\jquery.min.map" />
     <None Remove="lib\jquery\LICENSE.txt" />
+    <None Remove="mstile-150x150.png" />
+    <None Remove="safari-pinned-tab.svg" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="android-chrome-192x192.png" />
+    <EmbeddedResource Include="android-chrome-256x256.png" />
+    <EmbeddedResource Include="android-chrome-72x72.png" />
+    <EmbeddedResource Include="apple-touch-icon.png" />
+    <EmbeddedResource Include="browserconfig.xml" />
+    <EmbeddedResource Include="favicon-16x16.png" />
+    <EmbeddedResource Include="favicon-32x32.png" />
     <EmbeddedResource Include="favicon.ico" />
     <EmbeddedResource Include="js\site.js" />
     <EmbeddedResource Include="lib\bootstrap\dist\css\bootstrap-grid.css" />
@@ -160,6 +185,8 @@ Many applications in the Custom jSilvestri.com BETA v2024 Web API Demo Collectio
     <EmbeddedResource Include="lib\jquery\dist\jquery.min.js" />
     <EmbeddedResource Include="lib\jquery\dist\jquery.min.map" />
     <EmbeddedResource Include="lib\jquery\LICENSE.txt" />
+    <EmbeddedResource Include="mstile-150x150.png" />
+    <EmbeddedResource Include="safari-pinned-tab.svg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -172,13 +199,17 @@ Many applications in the Custom jSilvestri.com BETA v2024 Web API Demo Collectio
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\..\jSilvestri2024\wwwroot\favicon.png">
+    <EmbeddedResource Include="..\..\jSilvestri2024\wwwroot\favicon.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
-    </None>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="android-chrome-256x256.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
     <None Update="README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
