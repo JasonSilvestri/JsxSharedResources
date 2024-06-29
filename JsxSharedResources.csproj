@@ -11,21 +11,21 @@
     <Product>Jsx Shared Resources Asp.NET Core Project: From the jSilvestri.com BETA v 2024 Web API Demo Collection</Product>
     <Description>The jSilvestri.com BETA v 2024 mobile and web applications, developed for most smart phones, tablets and desktop computers, were created to showcase a wide range of skills to potential clients and employers, to support existing clients, while providing helpful information to fellow developers, demos for interview talks, access to resumes, etc.
 
-The JSX Shared Resources Project is a project that contains shared resources such as images, styles, and scripts used across multiple web applications in the jSilvestri.com BETA v 2024 Web API Demo Collection. This project aims to maintain consistency and avoid duplication of resources across different projects.
+The jSx Shared Resources Project is a project that contains shared resources such as images, styles, and scripts used across multiple web applications in the jSilvestri.com BETA v 2024 Web API Demo Collection. This project aims to maintain consistency and avoid duplication of resources across different projects.
 
 Currently in Phase 1 of 4, this project is one of several projects from the jSilvestri.com BETA v 2024 Web API Demo Collection.</Description>
     <Copyright>Copyright © 2024 All Rights Reserved by Jason Silvestri</Copyright>
-    <PackageIcon>android-chrome-256x256.png</PackageIcon>
+    <PackageIcon>favicon.ico</PackageIcon>
     <PackageProjectUrl>https://github.com/JasonSilvestri/JsxSharedResources</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/JasonSilvestri/JsxSharedResources.git</RepositoryUrl>
     <PackageReleaseNotes>
-      06/27/2024 JSILVESTRI.COM BETA V 2024.0.0.001 Release
+      06/28/2024 JSILVESTRI.COM BETA V 2024.0.0.001 Release
       Current Workflow State: Completed
       Mobile / Web Developer: Jason Silvestri
 
-      Date Reported:    June 26, 2024
-      Date Completed: June 27, 2024
+      Date Reported:    June 28, 2024
+      Date Completed: June 28, 2024
       Build: BETA v 2024.0.0.001
 
       All Notes:
@@ -37,7 +37,10 @@ Currently in Phase 1 of 4, this project is one of several projects from the jSil
 
       * Added new JsxSharedResources support for relative and absolute URL manufacturing via Constants.
 
-      ⚠️ IMPORTANT! ⚠️
+      * Found a ridiculous bug in Visual Studio 2022 Project settings, under &gt; Application &gt; Win32 Resources &gt; with the property “*.icon” property that was bringing down my jSx WebAPI application! Wait, what? Right. Plus, you may never set it, it is easy to miss, and occurs if you set a different, but similar property, under &gt; Package &gt; General &gt; with the property “*.icon” property.
+To reproduce the issue, the property encourages a png or jpg image to be added (preferably 128 x 128). I thought it was odd, given a property “*.icon is looking for a common favicon.ico. So, whatever. Still, just updated this property the other night to have a bigger, more high-resolution image. Well, apparently  the Application &gt; Win32 Resources &gt; “*.icon” property still doesn’t think so, and if it was empty before, it may not be now, because it will get updates by Package &gt; General &gt; with the property “*.icon” property, and it will crash you’re app, and then crash any app the project gets shared by.
+      
+⚠️ IMPORTANT! ⚠️
 
       This is the initial Phase 1 of 4 release of the application. It includes only the essential resources by design, and it will have a release lifecycle of already planned phases and features, also by design.
     </PackageReleaseNotes>
@@ -45,6 +48,7 @@ Currently in Phase 1 of 4, this project is one of several projects from the jSil
     <AssemblyVersion>2024.0.0.001</AssemblyVersion>
     <FileVersion>2024.0.0.1</FileVersion>
     <Version>2024.0.0.001</Version>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -55,7 +59,6 @@ Currently in Phase 1 of 4, this project is one of several projects from the jSil
     <None Remove="css\site.css" />
     <None Remove="favicon-16x16.png" />
     <None Remove="favicon-32x32.png" />
-    <None Remove="favicon.ico" />
     <None Remove="js\site.js" />
     <None Remove="lib\bootstrap\dist\css\bootstrap-grid.css" />
     <None Remove="lib\bootstrap\dist\css\bootstrap-grid.css.map" />
@@ -116,6 +119,10 @@ Currently in Phase 1 of 4, this project is one of several projects from the jSil
     <None Remove="lib\jquery\LICENSE.txt" />
     <None Remove="mstile-150x150.png" />
     <None Remove="safari-pinned-tab.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="favicon.ico" />
   </ItemGroup>
 
   <ItemGroup>
@@ -207,6 +214,10 @@ Currently in Phase 1 of 4, this project is one of several projects from the jSil
 
   <ItemGroup>
     <None Update="android-chrome-256x256.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="favicon.ico">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
